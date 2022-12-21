@@ -1,0 +1,23 @@
+ALGORITHM lit_une_phrase
+VAR
+     nbremot:INTEGER=0
+     long : INTEGER=1
+     nbrevoy : INTEGER=0
+     phra : STRING
+     i : INTEGER=0
+  
+BEGIN
+    read(phra)
+    WHILE (phra[i]<>'.') DO
+    i=i+1
+    long=long+1
+    IF (phra[i]=' ') THEN
+        nbremot=nbremot+1
+    END_IF
+        IF (phra[i] in ['a','A','e','E','i','I','u','U','o','O','y','Y']) THEN
+            nbrevoy= nbrevoy+1
+        END_IF
+    END_WHILE
+    Write ("cette phrase contient" ,nbremot,"mot",long,"caractere",nbrevoy,"voyel")
+
+END
